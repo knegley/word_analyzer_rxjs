@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where's Waldo</title>
+</head>
+
+<body>
+  <label for="waldoTextArea">Text Analyzer</label>
+  <textarea name="waldo" id="waldoTextArea" cols="30" rows="10"></textarea>
+  <!-- <input type="button" id="waldoBtn" value="Analyze Waldo Text" /> -->
+  <h1>Results</h1>
+  <section>
+    <h3>Word Stats</h3>
+    <p>Character Count: <span id="characters"></span></p>
+    <p>Word Count: <span id="words"></span></p>
+    <p>Longest Words: <span id="longestWord"></span></p>
+    <p>Shortest Word: <span id="shortestWord"></span></p>
+    <p>Last Three Words: <span id="lastThreeWords"></span></p>
+  </section>
+  <section>
+    <h3>Vowel Count</h3>
+    <p>A: <span id="a">0</span></p>
+    <p>I: <span id="i">0</span></p>
+    <p>E: <span id="e">0</span></p>
+    <p>O: <span id="o">0</span></p>
+    <p>U: <span id="u">0</span></p>
+  </section>
+  <section>
+    <h3>Punctuation Count</h3>
+    <p>"." : <span id="period"></span></p>
+    <p>"," : <span id="comma"></span></p>
+    <p>"?" : <span id="question"></span></p>
+    <p>"!" : <span id="exclamation"></span></p>
+
+  </section>
+  <section>
+    <h3>Waldo Indexes</h3>
+    <p>Locations: <span id="waldoIndexes"></span></p>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.6.0/rxjs.umd.min.js"
+    integrity="sha512-ejsljG9xAKvLl8gCL5FQmGLQ5dZvr2g9n7iwBYG3bIAmfPwjA4P2tX6lvvj2ry+cUpmiuBaF70F3Y5/6o/KrPQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+  <!-- <script src="https://unpkg.com/rxjs@7.6.0/dist/bundles/rxjs.umd.min.js"></script> -->
+  <script type="module" src="waldo.js"></script>
+  <script type="module" src="./modules/subscriptions.mjs"></script>
+  <script type="module" src="./modules/observers.mjs"></script>
+  <script type="module" src="./modules/waldoHandlers.mjs"></script>
+</body>
+
+</html>
